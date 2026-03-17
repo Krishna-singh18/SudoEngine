@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "build:cpp": "g++ -O2 -std=c++17 -o cpp/solver cpp/solver.cpp",
+    "build": "npm run build:cpp",
     "dev": "npm run build:cpp && node backend/server.js"
   },
   "dependencies": {
