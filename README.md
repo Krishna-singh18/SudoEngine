@@ -1,6 +1,9 @@
-# 🧩 SUDOKU — Solver Platform
+# 🧩 SUDOENGINE - Sudoku Solver Platform
+
 
 A production-grade Sudoku web application featuring a **C++ solving engine**, **Node.js REST API**, and a **Vanilla JS frontend** with advanced UX.
+
+**Live Demo:** [https://sudoengine.onrender.com/](https://sudoengine.onrender.com/)
 
 ---
 
@@ -20,6 +23,7 @@ User (Browser) → Fetch API → Express Server → C++ Solver (child_process) �
 | Backend     | Node.js + Express                   |
 | Engine      | C++ (g++ -O2, Pure Backtracking)    |
 | Storage     | localStorage (puzzle history)       |
+| Hosting     | Render.com (Free Tier)              |
 
 ---
 
@@ -79,11 +83,21 @@ npm install
 npm start
 ```
 
-### 4. Open in browser
+---
 
-```
-http://localhost:3000
-```
+## Deployment (Hosting)
+
+This project is optimized for deployment on platforms like Render or Railway.
+
+### Key Changes for Hosting:
+- **Relative API Paths**: Frontend calls `/api` instead of `localhost`.
+- **Automated C++ Build**: `package.json` includes a `build` script that compiles the solver engine during deployment.
+
+### How to Deploy:
+1. Push code to GitHub.
+2. Link repository to **Render.com**.
+3. **Build Command**: `npm install && npm run build`
+4. **Start Command**: `npm start`
 
 ---
 
